@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container {
+    min-height: 120vh;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.bg::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(45%);
+    background-image: url("https://i.pinimg.com/736x/d7/29/ed/d729ed209c905835e963733968cf32d5.jpg"); /* picture link address */
+    background-size: cover;
+    background-position: center;
+}
+.navBar {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 15vh;
+}
+.navBar ul {
+    display: flex;
+    align-items: center;
+}
+.navBar ul li {
+    padding: 0 25px;
+}
+.navBar ul li a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.navBar .logo a {
+    font-size: 2.3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+.phuket {
+    color: #fff;
+    padding: 25px;
+    width: 50%;
+}
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    width: 50%;
+}
+.card h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+.card div {
+    width: 90%;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    border: 2px solid transparent;
+}
+.box1 {
+    background-image: url("https://i.pinimg.com/736x/d7/86/a4/d786a4786b6ef6dc146f50919c37117c.jpg"); /* picture link address */
+}
+.box2 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQabY_aDM82gXNhGYY20DphK973KiNq3r_P8k-Xrklgig&s"); /* picture link address */
+}
+.box3 {
+    background-image: url("https://img.freepik.com/premium-photo/warrior-girl-with-assault-rifle-her-hands-anime-style_374761-1872.jpg"); /* picture link address */
+}
+.box4 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStttBP8F7V55xAb4ygvwmVAWwr10odhtNs74PqUTJKM3c-YH0GTGtT6Fprq4MNLOLboK0&usqp=CAU"); /* picture link address */
+}
+.phuket h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.phuket p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+.tnx h2 i {
+    color: #fd7e13;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f3c5";
+}
+.card div:hover {
+    transition: 0.3s;
+    transform: translateY(-10px);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border: 2px solid #fff;
+}
+a[target="_blank"]::after {
+    content: "\f08e";
+    font-family: "Font Awesome 5 Free";
+    margin-left: 5px;
+}
+
+/* เพิ่มสไตล์ให้กับกล่อง Bleach */
+.box1:hover::before {
+    content: "Explore Bleach";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* เพิ่มสไตล์ให้กับกล่อง Island */
+.box2:hover::before {
+    content: "Discover Island";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* เพิ่มสไตล์ให้กับกล่อง Mountain */
+.box3:hover::before {
+    content: "Conquer Mountain";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* เพิ่มสไตล์ให้กับกล่อง Scenery */
+.box4:hover::before {
+    content: "Admire Scenery";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* เพิ่มสไตล์ให้กับข้อความที่เมาส์ชี้ไป */
+.card div h2 {
+    font-size: 1.8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card div:hover h2 {
+    font-size: 2rem;
+    color: #fd7e13;
+}
+</style>
+<title>Travel Website</title>
+</head>
+<body>
+
+<div class="container bg">
+    <div class="navBar">
+        <div class="logo">
+            <a href="#">
+                <i class="fas fa-solid fa-heart"></i>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="phuket">
+            <div class="tnx">
+                <h2><i class="fa-solid fa-sitemap"></i></i> Name</h2>
+            </div>
+            <div class="txt">
+            </div>
+            <p>Name</p>
+        </div>
+        <div class="card">
+            <a href="https://www.google.com/" target="_blank">
+                <div class="box1">
+                    <h2>name</h2> 
+                </div>
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+                <div class="box2">
+                    <h2>name</h2>
+                </div>
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+                <div class="box3">
+                    <h2>name</h2>
+                </div>
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+                <div class="box4">
+                    <h2>name</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.card div').forEach(item => {
+    item.addEventListener('mouseenter', event => {
+        item.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+    });
+
+    item.addEventListener('mouseleave', event => {
+        item.style.backgroundColor = '';
+    });
+});
+</script>
+
+</body>
+</html>
